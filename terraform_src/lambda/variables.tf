@@ -4,7 +4,7 @@ variable "name" {
 
 variable "runtime" {
   description = "The runtime of the lambda to create"
-  default     = "nodejs"
+  default     = "python2.7"
 }
 
 variable "handler" {
@@ -14,4 +14,8 @@ variable "handler" {
 
 variable "role" {
   description = "IAM role attached to the Lambda Function (ARN)"
+}
+
+variable "zipfilename" {
+  description = "The Zip filename of the python code of the lambda"
 }

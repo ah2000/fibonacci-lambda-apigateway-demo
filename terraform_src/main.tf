@@ -29,7 +29,7 @@ EOF
 module "lambda" {
   source  		= "./lambda"
   name    		= "hello_lambda"
-  zipfilename 	= "lambda_fibonacci.zip"
+  zipfilename 	= "${path.root}/../lambda_fibonacci.zip"
   runtime 		= "python2.7"
   role    		= "${aws_iam_role.iam_role_for_lambda.arn}"
 }
@@ -39,6 +39,7 @@ module "lambda" {
 module "lambda_post" {
   source  = "./lambda"
   name    = "hello_lambda"
+  zipfilename 	= "${path.root}/../lambda_fibonacci.zip"
   handler = "post_handler"
   runtime = "python2.7"
   role    = "${aws_iam_role.iam_role_for_lambda.arn}"
