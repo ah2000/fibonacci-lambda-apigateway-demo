@@ -17,3 +17,13 @@ variable "environment" {
   description = "the environment"
   default     = "dev"
 }
+
+variable "aws_access_key_id" {
+   description = "the aws access credentials AWS_ACCESS_KEY_ID env to run the terraform under"
+   default = "AKIAJZ7AP3WGJOTP2QUO"
+}
+
+variable "aws_secret_key" {
+   description = "the aws access credentials AWS_SECRET_KEY to run the terraform under"
+   default = "jDlk8ZUGQInBnxH/5d7MlpCCMx8lRgoACKWuDpKV"
+}
