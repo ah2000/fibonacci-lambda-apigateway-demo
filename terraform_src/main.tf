@@ -30,7 +30,7 @@ EOF
 module "lambda" {
   source  		= "./lambda"
   name    		= "hello_lambda"
-  zipfilename 	= "${path.root}/../${var.releasezipfile}"
+  zipfilename 	= "${var.releasezipfile}"
   runtime 		= "python3.6"
   role    		= "${aws_iam_role.iam_role_for_lambda.arn}"
 }
@@ -40,7 +40,7 @@ module "lambda" {
 module "lambda_post" {
   source  = "./lambda"
   name    = "hello_lambda"
-  zipfilename 	= "${path.root}/../${var.releasezipfile}"
+  zipfilename 	= "${var.releasezipfile}"
   handler = "post_handler"
   runtime = "python3.6"
   role    = "${aws_iam_role.iam_role_for_lambda.arn}"
