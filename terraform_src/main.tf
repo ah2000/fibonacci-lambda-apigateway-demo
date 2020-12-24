@@ -30,7 +30,7 @@ module "lambda" {
   source  		= "./lambda"
   name    		= "hello_lambda"
   zipfilename 	= "${path.root}/../lambda_fibonacci.zip"
-  runtime 		= "python2.7"
+  runtime 		= "python3.6"
   role    		= "${aws_iam_role.iam_role_for_lambda.arn}"
 }
 
@@ -41,7 +41,7 @@ module "lambda_post" {
   name    = "hello_lambda"
   zipfilename 	= "${path.root}/../lambda_fibonacci.zip"
   handler = "post_handler"
-  runtime = "python2.7"
+  runtime = "python3.6"
   role    = "${aws_iam_role.iam_role_for_lambda.arn}"
 }
 
