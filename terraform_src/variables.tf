@@ -18,3 +18,7 @@ variable "environment" {
   default     = "dev"
 }
 
+variable "releasezipfile" {
+  description = "the zipfile with the code for the lambda to be released"
+  default = "lambda_fibonacci.zip"
+}
